@@ -1,6 +1,6 @@
 Name:                jasper
 Version:             2.0.14
-Release:             9
+Release:             10
 Summary:             Reference implementation of the codec specified in the JPEG-2000 standard, Part 1
 License:             JasPer
 URL:                 http://www.ece.uvic.ca/~frodo/jasper/
@@ -18,6 +18,7 @@ Patch0009:           CVE-2018-19540.patch
 Patch0010:           CVE-2018-19541.patch
 Patch0011:           CVE-2018-20570.patch
 Patch0012:           CVE-2018-20622.patch
+Patch0013:           CVE-2021-27845.patch
 
 BuildRequires:       cmake freeglut-devel libGLU-devel libjpeg-devel libXmu-devel libXi-devel
 BuildRequires:       pkgconfig doxygen mesa-libGL-devel
@@ -97,6 +98,9 @@ make test -C builder
 %doc README
 
 %changelog
+* Wed Sep 8 2021 liwu <liwu13@huawei.com> - 2.0.14-10
+- fix CVE-2021-27845
+
 * Wed Sep 16 2020 wutao <wutao61@huawei.com> - 2.0.14-9
 - fix folllowing CVE in this revision
   CVE-2018-18873
